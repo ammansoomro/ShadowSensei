@@ -119,7 +119,7 @@ $result2 = $conn->query($query2);
 
                 <div class="recentCustomers">
                     <div class="cardHeader">
-                        <h2>Students Details</h2>
+                        <h2>Students Detail</h2>
                         <a href="Student_Details.php" class="btn">View All</a>
                     </div>
                     <table>
