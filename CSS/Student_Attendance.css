@@ -431,3 +431,16 @@ body {
 .recentCustomers table tr:hover td h4 span{
     color: var(--white);
 }
+select {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #da450f;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 7px 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+}

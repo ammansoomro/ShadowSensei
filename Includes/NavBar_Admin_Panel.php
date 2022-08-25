@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="http://localhost:8232/Course_Details.php?search=">
+                    <a href="/Course_Details.php?search=">
                         <span class="icon">
                             <ion-icon name="book-outline"></ion-icon>
                         </span>

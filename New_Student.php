@@ -12,7 +12,7 @@ $result = $conn->query($query);
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="CSS/New_Student.css" />
+    <link rel="stylesheet" href="CSS/New_Student2.css" />
     <title>Admin Panel</title>
 </head>
 
@@ -31,11 +31,15 @@ $result = $conn->query($query);
         <div class="myform">
             <form method="POST" action="/Insert/Insert_Student_Details.php">
                 <h2>New Student</h2>
-                <input id="fname" name="fname" type="text" placeholder="Full Name">
-                <input id="gender" name="gender" type="text" placeholder="Gender">
+                <input id="fname" name="fname" type="text" placeholder="Full Name" required>
+                <select name="gender" id="gender">
+                    <option value="Null">Select your Gender</option >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
                 <input id="address" name="address" type="text" placeholder="Address">
-                <input id="sid" name="sid" type="text" placeholder="Student ID">
-                <input id="password" name="password" type="password" placeholder="Password">
+                <input id="sid" name="sid" type="text" placeholder="Student ID" required>
+                <input id="password" name="password" type="password" placeholder="Password" required>
                 <button type="submit">Add Student</button>
             </form>
         </div>

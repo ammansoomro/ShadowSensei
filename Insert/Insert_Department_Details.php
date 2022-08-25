@@ -8,14 +8,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     $submit_result = $conn->query($submit);
     if(mysqli_num_rows($submit_result)>0)
     {
-        header("location:http://localhost:8232/SameData.php");
+        header("location:../SameData.php");
     }
     else
     {
         $Query = "INSERT INTO department_details VALUES (
             '$Department_ID','$Department_Name')";
         $conn->query($Query);
-        header("location:http://localhost:8232/Successful.php");
+        header("location:../Successful.php");
     }
 
 }

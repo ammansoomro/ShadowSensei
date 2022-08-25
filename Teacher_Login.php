@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Login Page</title>
-    <link rel="stylesheet" href="CSS/Teacher_Login.css">
+    <link rel="stylesheet" href="CSS/Teacher_Login2.css">
 </head>
 
 <body>
     <div class="container">
         <a href="index.php">
             <div class="image">
-                <img src="Pictures/Ninja_Logo.png">
+                <img src="Pictures/img05.png">
             </div>
         </a>
         <div class="myform">

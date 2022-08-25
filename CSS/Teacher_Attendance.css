@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -73,15 +74,18 @@ body {
 .navigation ul li:nth-child(1) .title {
   margin-top: 5px;
 }
+
 .navigation ul li:nth-child(1) .icon {
   min-height: 60px;
   height: 60px;
   line-height: 75px;
   text-align: center;
 }
+
 .navigation ul li a .icon {
   padding: 0 10px;
 }
+
 .navigation ul li a {
   position: relative;
   display: block;
@@ -95,6 +99,7 @@ body {
 .navigation ul li.hovered a {
   color: var(--blue);
 }
+
 .navigation ul li a .icon {
   position: relative;
   display: block;
@@ -161,6 +166,7 @@ body {
   width: calc(100% - 80px);
   left: 80px;
 }
+
 .topbar {
   width: 100%;
   height: 60px;
@@ -272,6 +278,7 @@ body {
 .cardBox .card:hover {
   background-color: var(--blue);
 }
+
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
 .cardBox .card:hover .iconBx {
@@ -377,33 +384,47 @@ body {
   color: var(--white);
 }
 
-.recentCustomers table tr:hover td h4 span{
-    color: var(--white);
+.recentCustomers table tr:hover td h4 span {
+  color: var(--white);
 }
 
 .flex-container {
-    display: flex;
-    margin-top: 50px;
-    flex-wrap: wrap;
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 
 
 .line-break {
-    width: 100%;
-  }
+  width: 100%;
+}
 
 
 form {
-    width: 300px;
-    margin-top: 10px;
+  width: 300px;
+  margin-top: 10px;
 }
 
-input[type='number']{
-    width: 60px;
-} 
+input[type='number'] {
+  width: 60px;
+}
 
 td {
-    text-align: center; 
-    vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.SectionSelect {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #af2023;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 7px 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
 }

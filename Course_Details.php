@@ -22,7 +22,7 @@ $result = $conn->query($query);
 
 <body>
     <div class="container">
-    <?php include("Includes/NavBar_Courses.php") ?>
+        <?php include("Includes/NavBar_Courses.php") ?>
 
         <!-- Dashboard Main -->
         <div class="main">
@@ -73,7 +73,7 @@ $result = $conn->query($query);
                             </tr>
                         </thead>
                         <tbody>
-                        <?php
+                            <?php
                             if(isset($_GET['search']))
                             {
                                 $filteredvalues = $_GET['search'];
@@ -84,14 +84,18 @@ $result = $conn->query($query);
                                     foreach($filter_output as $items)
                                     {
                                         ?>
-                            <tr id = <?php echo $items["Course_ID"]; ?>>
+                            <tr id=<?php echo $items["Course_ID"]; ?>>
                                 <td><?php echo $items["Course_ID"]; ?></td>
                                 <td><?php echo $items["Course_Name"]; ?></td>
                                 <td><?php echo $items["Credit_Hours"]; ?></td>
                                 <td>
-                                
-                                    <button onclick="editCourse(this.closest('tr').id)"><ion-icon name="create-outline">Edit</ion-icon></button>
-                                    <button  onclick="deleteCourse(this.closest('tr').id)"><ion-icon name="trash-outline">Delete</ion-icon></button>
+
+                                    <button onclick="editCourse(this.closest('tr').id)">
+                                        <ion-icon name="create-outline">Edit</ion-icon>
+                                    </button>
+                                    <button onclick="deleteCourse(this.closest('tr').id)">
+                                        <ion-icon name="trash-outline">Delete</ion-icon>
+                                    </button>
                                 </td>
                             </tr>
                             <?php
@@ -127,24 +131,29 @@ $result = $conn->query($query);
 
     let editing = -1;
     let orig = 0;
-    
+
     function revert(id) {
         row = document.getElementById(id);
         row.replaceWith(orig);
         editing = -1;
     }
+
     function editCourse(id) {
         row = document.getElementById(id);
         if (editing != -1 && editing != id) {
             revert(editing);
             editCourse(id);
         } else {
-            
+
             orig = row.cloneNode(true);
-            row.childNodes[1].innerHTML = '<input type="text" class="cid" name="cid" value ="'+ row.childNodes[1].innerHTML +'">';
-            row.childNodes[3].innerHTML = '<input type="text" class="cname" name="cname" value ="'+ row.childNodes[3].innerHTML +'">';
-            row.childNodes[5].innerHTML = '<input class="credit" name="credit" type="number" value =' + row.childNodes[5].innerHTML + '>';
-            row.childNodes[7].innerHTML = `<button onclick="updateCourse(this.closest('tr').id)"><ion-icon name="checkmark-done-outline">Submit</ion-icon></button>
+            row.childNodes[1].innerHTML = '<input type="text" class="cid" name="cid" value ="' + row.childNodes[1]
+                .innerHTML + '">';
+            row.childNodes[3].innerHTML = '<input type="text" class="cname" name="cname" value ="' + row.childNodes[3]
+                .innerHTML + '">';
+            row.childNodes[5].innerHTML = '<input class="credit" name="credit" type="number" value =' + row.childNodes[
+                5].innerHTML + '>';
+            row.childNodes[7].innerHTML =
+                `<button onclick="updateCourse(this.closest('tr').id)"><ion-icon name="checkmark-done-outline">Submit</ion-icon></button>
                                             <button onclick="revert(this.closest('tr').id)"><ion-icon name="close-outline">Cancel</ion-icon></button>`
         }
         editing = id;
@@ -153,18 +162,17 @@ $result = $conn->query($query);
     function updateCourse(id) {
         let previd = id;
         row = document.getElementById(id);
-        $.ajax({  
-            type: 'POST',  
-            url: '/Update/Update_Course.php', 
-            data: 
-            { 
+        $.ajax({
+            type: 'POST',
+            url: '/Update/Update_Course.php',
+            data: {
                 previd: previd,
                 cid: row.getElementsByClassName('cid')[0].value,
                 cname: row.getElementsByClassName('cname')[0].value,
                 credit: row.getElementsByClassName('credit')[0].valueAsNumber
             },
             success: function(response) {
-                if(response == '1') {
+                if (response == '1') {
                     location.reload();
                 } else {
                     Warning_Course_Update();
@@ -179,12 +187,14 @@ $result = $conn->query($query);
     };
 
     function deleteCourse(cid) {
-        $.ajax({  
-            type: 'POST',  
-            url: '/Delete/Delete_Course.php', 
-            data: { id: cid },
+        $.ajax({
+            type: 'POST',
+            url: '/Delete/Delete_Course.php',
+            data: {
+                id: cid
+            },
             success: function(response) {
-                if(response == '1') {
+                if (response == '1') {
                     Success_Delete();
                 } else {
                     Error_Course_Delete();

@@ -10,7 +10,7 @@ include_once('connect.php');
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="CSS/Teacher_Attendance.css" />
+    <link rel="stylesheet" href="CSS/Teacher_Attendance2.css" />
     <?php include("Includes/Alerts.php") ?>
 
     <script src="Includes/jquery-3.6.0.min.js"></script>
@@ -42,19 +42,18 @@ include_once('connect.php');
                     </div>
                     <div class="flex-container">
                         <label for="student">Choose a section: </label>
-                        <select name="section" id="section" onchange="populateLectures(this.value);"
+                        <select class="SectionSelect" name="section" id="section" onchange="populateLectures(this.value);"
                             style="margin-right:40px; margin-left:10px"></select>
                         <label for="student">Choose a lecture: </label>
-                        <select name="lecture" id="lecture" onchange="populateStudentsAttendance();"
+                        <select class="LectureSelect" name="lecture" id="lecture" onchange="populateStudentsAttendance();"
                             style="margin-right:40px; margin-left:10px"></select>
                     </div>
                     <form>
                         <label for="ass">Add a new lecture:</label>
                         <div class="inp">
-                            <input type="date" id="datee" name="datee">
-                        </div><br>
-                        <!-- <div class="line-break"></div> -->
-                        <input type="submit" value="Add">
+                            <input class = "LectureDate" type="date" id="datee" name="datee">
+                            <input class ="button" type="submit" value="Add">
+                        </div>
                     </form>
                     <table id="attendance">
 
@@ -122,7 +121,7 @@ include_once('connect.php');
                                     <td>` + obj[i][0] + `</td>
                                     <td>` + obj[i][1] + `</td>
                                     <td>
-                                        <select id="` + obj[i][0] + `" onchange="markAttendance(this);">
+                                        <select class="attendanceselect" id="` + obj[i][0] + `" onchange="markAttendance(this);">
                                             <option value="p">Present</option>
                                             <option value="a">Absent</option>
                                         </select>

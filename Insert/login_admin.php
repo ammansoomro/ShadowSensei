@@ -10,11 +10,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $cookie_name = "user";
         setcookie($cookie_name, $Username, time() + (86400 * 30), "/"); // 86400 = 1 day
-        header("location:http://localhost:8232/Admin_Panel.php");
+        header("location:../Admin_Panel.php");
     }
     else
     {
-        header("location:http://localhost:8232/Login_Failed.php");   
+        header("location:../Login_Failed.php");   
     }
 }
 ?>

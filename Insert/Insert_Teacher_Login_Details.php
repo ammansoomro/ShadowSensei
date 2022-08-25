@@ -10,11 +10,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $cookie_name = "faculty";
         setcookie($cookie_name, $Username, time() + (86400 * 30), "/");
-        header("location:http://localhost:8232/Teacher_Panel.php");
+        header("location:../Teacher_Panel.php");
     }
     else
     {
-        header("location:http://localhost:8232/Login_Failed.php");   
+        header("location:../Login_Failed.php");   
     }
 }
 ?>
