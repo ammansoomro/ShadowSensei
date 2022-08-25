@@ -31,7 +31,7 @@ setcookie($cookie_name);
                 <h2>Admin Login</h2>
                 <input id="uname" name="uname" type="text" placeholder="Username">
                 <input id="pass" name="pass" type="password" placeholder="Password">
-                <button type="submit">Login</button>
+                <button type="submit">Log in</button>
             </form>
         </div>
 
