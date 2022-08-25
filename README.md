@@ -8,3 +8,5 @@ To run the code:
 3. Open localhost on browser, for example: http://localhost:8232/
 
 Demo: https://k191048localweb.000webhostapp.com/NinjaDBMS/index.php
+
+![image](https://user-images.githubusercontent.com/63865428/186759557-30e257c9-7a1f-431a-bb57-e987fa4cf9ff.png)
