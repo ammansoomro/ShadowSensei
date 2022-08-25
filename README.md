@@ -2,12 +2,12 @@
 
 Demo: https://k191048localweb.000webhostapp.com/NinjaDBMS/index.php
  
-To run the code:
+## To run the code:
 1. Start XAMPP Server.
 2. Copy all the files in htdocs folder of XAMPP
 3. Open localhost on browser, for example: http://localhost:8232/
 
-Languages used: 
+## Languages used: 
 - Php
 - Html
 - CSS
