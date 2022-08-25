@@ -2,17 +2,19 @@
 
 Demo: https://k191048localweb.000webhostapp.com/NinjaDBMS/index.php
  
-## To run the code:
+<h1 align="center">To run the code</h1>
+
 1. Start XAMPP Server.
 2. Copy all the files in htdocs folder of XAMPP
 3. Open localhost on browser, for example: http://localhost:8232/
 
-## Languages used: 
+### Languages used: 
 - Php
 - Html
 - CSS
 - Java Script
 
+<h1 align="center">Screenshots</h1>
 
 ![image](https://user-images.githubusercontent.com/63865428/186759557-30e257c9-7a1f-431a-bb57-e987fa4cf9ff.png)
 ![image](https://user-images.githubusercontent.com/63865428/186759730-ad427022-a835-4264-99cf-f5ee3a34c491.png)
