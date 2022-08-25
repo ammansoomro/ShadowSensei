@@ -10,3 +10,5 @@ To run the code:
 Demo: https://k191048localweb.000webhostapp.com/NinjaDBMS/index.php
 
 ![image](https://user-images.githubusercontent.com/63865428/186759557-30e257c9-7a1f-431a-bb57-e987fa4cf9ff.png)
+![image](https://user-images.githubusercontent.com/63865428/186759730-ad427022-a835-4264-99cf-f5ee3a34c491.png)
+![image](https://user-images.githubusercontent.com/63865428/186760007-cf23a2fd-bb4e-435b-86dc-f04ba4ad824a.png)
